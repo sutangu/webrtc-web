@@ -1,10 +1,10 @@
 'use strict';
 
-var constraints = {
+const constraints = {
     video: true
-}
+};
 
-var video = document.querySelector('video');
+const video = document.querySelector('video');
 
 function handleSuccess(stream) {
     video.srcObject = stream;
@@ -16,4 +16,4 @@ function handleError(error) {
 
 navigator.mediaDevices.getUserMedia(constraints)
     .then(handleSuccess)
-    .catch(handleError)
+    .catch(handleError);
